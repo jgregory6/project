@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles/contact.css"/>
 </head>
 <body>
-    <div id="navigation">
+    <div id="nav">
         <nav>
-        <a href="project-index.html">Home</a>
-        <a href="project-blog.html">Blog</a>
-        <a href="project-street-art.html">Street Art</a>
-        <a href="project-upcoming-exhibits.html">Upcoming Exhibits</a>
-        <a href="project-artist-spotlight.html">Artist Spotlight</a>
-        <a href="project-contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="street-art.html">Street Art</a>
+        <a href="upcoming-exhibits.html">Upcoming Exhibits</a>
+        <a href="artist-spotlight.html">Artist Spotlight</a>
+        <a href="contact.html">Contact</a>
         </nav>
 </div>
-<div>
+
+<div class="container">
     <div>
     <form action="mailto:jgregory1@babson.edu" method="POST">
         <label for="first-name">First Name</label>
@@ -29,7 +31,6 @@
             type="text" 
             id="email"
             name="email" 
-            maxlength="100"
             placeholder="Email Address"
         />
     </div>
@@ -44,13 +45,16 @@
             ></textarea>
     </div>
     <div>
-        <button type="submit" name="submit-button">Submit</button>
-        <button type="reset" name="reset-button">Reset</button>
+        <button type="submit" id="submit" name="submit-button">Submit</button>
+        <button type="reset" id="reset" name="reset-button">Reset</button>
     </div>
     </form>
-    <div>
-        <a href="project-site-map.html"><p style="text-align: center;">Site Map</p></a>
-    </div>
 </div>
+    <div id="site-map">
+        <a href="site-map.html"><p style="text-align: center;">Site Map</p></a>
+    </div>
+<script>
+    
+</script>
 </body>
 </html>

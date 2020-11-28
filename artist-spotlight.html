@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/artist-spotlight.css"/>
+</head>
+<body>
+    <div id="nav">
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="street-art.html">Street Art</a>
+        <a href="upcoming-exhibits.html">Upcoming Exhibits</a>
+        <a href="artist-spotlight.html">Artist Spotlight</a>
+        <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <h1>Artist Spotlight</h1>
+    <div class="grid-container">
+        <div>Banksy</div>
+        <div>Anonymous England-based street artist</div>
+        <div>
+            <h4>Works</h4>
+            <img id="image-1" src="images/Banksy.jpg" alt="Follow Your Dreams - CANCELLED">
+        </div>
+            <div class="modal">
+                <span class="close">&times</span>
+                <img class="modal-content">
+                <div class="caption"></div>
+            </div>
+        <div>Cey Adams</div>
+        <div>A visual artist from NYC</div>
+        <div>
+            <h4>Works</h4>
+            <img id="image-2" src="images/Cey Adams.jpg" alt="Love Mural">
+        </div>
+            <div class="modal">
+                <span class="close">&times</span>
+                <img class="modal-content">
+                <div class="caption"></div>
+            </div>
+    </div>
+    <div id="site-map">
+        <a href="site-map.html"><p style="text-align: center;">Site Map</p></a>
+    </div>
+    <script>
+        let modal = document.getElementsByClassName("modal");
+        let img1 = document.getElementById("image-1");
+        let img2 = document.getElementById("image-2");
+        let modalImg = document.getElementsByClassName("modal-content");
+        let caption = document.getElementsByClassName("caption");
+        
+        function one () {
+            modal.style.display = "block";
+            modalImg.src = img1.src;
+            caption.innerHTML = img1.alt;
+        }
+        img1.onclick = one;
+
+        let span = document.getElementsByClassName("close")[0];
+
+        function two () {
+             modal.style.display = "none";
+        }
+        span.onclick = two;
+ 
+    </script>
+</body>
+</html>

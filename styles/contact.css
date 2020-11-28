@@ -1,0 +1,102 @@
+/* Navigation Bar */
+#nav {
+    text-align: center;
+}
+
+#nav a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    background-color: silver;
+}
+
+#nav a:active {
+    color:lightblue;
+}
+
+#nav a:visited {
+    color: forestgreen;
+}
+
+.container {
+   padding: 10px; 
+   margin-top: 20px;
+   border-style: solid;
+   border-width: 4px;
+   border-color: slategrey;
+}
+
+#first-name {
+    padding: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#last-name {
+    padding: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#email {
+    padding: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+/*
+label [for=emails] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+*/
+#comments {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    resize: vertical ;
+    display: inline-block;
+    box-sizing: border-box;
+}
+/*
+label [for=comments] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+*/
+#submit {
+    margin-top: 10px
+}
+
+#reset {
+    margin-top: 10px;
+}
+/* Sitemap */
+#site-map {
+    text-align: center;
+    padding-top: 600px; 
+}
+
+#site-map a {
+    text-decoration: none;
+}
+
+#site-map a:hover {
+    background-color: silver;
+}
+
+#site-map a:active {
+    color:lightblue;
+}
+
+#site-map a:visited {
+    color: forestgreen;
+}

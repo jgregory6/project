@@ -1,0 +1,40 @@
+#nav {
+    text-align: center;
+}
+
+#nav a {
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+#nav a:hover {
+    background-color: silver;
+}
+
+#nav a:active {
+    color:lightblue;
+}
+
+#nav a:visited {
+    color: forestgreen;
+}
+
+#site-map {
+    text-align: center;
+}
+
+#site-map a {
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+#site-map a:active {
+    color:lightblue;
+}
+
+#site-map a:visited {
+    color: forestgreen;
+}
+

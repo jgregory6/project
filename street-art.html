@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steet Art</title>
+    <link rel="stylesheet" href="styles/street-art.css"/>
+</head>
+<body>
+    <div id="nav">
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="street-art.html">Street Art</a>
+        <a href="upcoming-exhibits.html">Upcoming Exhibits</a>
+        <a href="artist-spotlight.html">Artist Spotlight</a>
+        <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="slideshow-container">
+        <div class="slides">
+           <div class="counter">1/4</div>
+           <img src="images/Biggie.jpg" alt="The Notorious B.I.G."> 
+           <div class="caption">The Notortious B.I.G by Unknown</div>
+        </div>
+
+        <div class="slides">
+            <div class="counter">2/4</div>
+            <img src="images/Os Gemeos.jpg" alt="Os Gemeos">
+            <div class="caption">"The Giant of Boston" by Os Gemeos</div>
+        </div>
+
+        <div class="slides">
+            <div class="counter">3/4</div>
+            <img src="images/Muhammad Ali.jpg" alt="Muhammad Ali">
+            <div class="caption">Muhammad Ali by Unknown</div>
+        </div>
+
+        <div class="slides">
+            <div class="counter">4/4</div>
+            <img src="images/Terry Rozier.jpg" alt="Scary Terry">
+            <div class="caption">Scary Terry by Merkaveli</div>
+        </div>
+        <a id="prev">&#10094;</a>
+        <a id="next">&#10095;</a>
+    </div>
+    <div class= "dots" style="text-align:center"> 
+        <span id="dot-1"></span>
+        <span id="dot-2"></span>
+        <span id="dot-3"></span>
+        <span id="dot-4"></span>
+    </div>
+    <div id="site-map">
+        <a href="site-map.html"><p>Site Map</p></a>
+    </div>
+    <script>
+     let slideIndex = 1;
+        showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }       
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slides");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length} ;
+        for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+        slides[slideIndex-1].style.display = "block"; 
+}
+     document.getElementById("prev").addEventListener("click", function () {plusSlides(-1)});
+     document.getElementById("next").addEventListener("click", function () {plusSlides(1)});
+
+    /* The => can be used in place of the function () to shorten the function syntax
+    like document.getElementById("prev").addEventListener("click", () => {
+     plusSlides(-1) which is useful});  */
+    </script>
+</body>
+</html>

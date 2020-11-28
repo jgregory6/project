@@ -1,0 +1,21 @@
+#nav {
+    text-align: center;
+}
+
+#nav a {
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+#nav a:hover {
+    background-color: silver;
+}
+
+#nav a:active {
+    color:lightblue;
+}
+
+#nav a:visited {
+    color: forestgreen;
+}

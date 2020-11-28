@@ -1,0 +1,51 @@
+h1{
+    text-align: center; 
+}
+
+#nav {
+    text-align: center;
+}
+
+#nav a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    background-color: silver;
+}
+
+#nav a:active {
+    color:lightblue;
+}
+
+#nav a:visited {
+    color: forestgreen;
+}
+
+#graffiti-alley {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 1000px;
+    height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/*Site Map*/
+#site-map {
+    text-align: center;
+}
+
+#site-map a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+#site-map a:active {
+    color:lightblue;
+}
+
+#site-map a:visited {
+    color: forestgreen;
+}
