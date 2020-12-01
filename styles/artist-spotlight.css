@@ -1,10 +1,25 @@
+h2{
+    text-align: center;
+    color: forestgreen;
+}
+
+#logo {
+    width: 5%;
+    padding-right: 2px;
+}
+
+/* Navigation Bar */
 #nav {
     text-align: center;
+    font-size: 20px;
+    padding-bottom: 20px;
 }
 
 #nav a {
     padding: 10px;
     text-decoration: none;
+    border-bottom: 2px solid silver;
+
 }
 
 #nav a:hover {
@@ -19,6 +34,7 @@
     color: forestgreen;
 }
 
+
 .grid-container {
     display: grid;
     align-content: center;
@@ -28,32 +44,36 @@
     margin-top: 20x;
     border-style: none;
     border-width: 2px;
-    border-color: slategray;
+    border-color: slategray; 
 }
 
 .grid-container > div {
     border-style: solid;
     border-width: 2px;
     border-color: slategray;
-    padding: 4px;
+    padding: 2px; 
     text-align: center; 
+
 }
-   
+
 h4 {
     font-weight: normal;
     text-align: center;
     width: 100%;
 }
 
-#image-1, #image-2 {
-    width: 300px;
-    height: 200px;
-    width: 100%;
+#Banksy, #Cey-Adams, #Marka27 {
+    width: auto;
+    height: 200px; 
     cursor: pointer;
     transition: 0.3s;
 }
 
-#image-1, #image-2:hover {opacity: 0.7;}
+#Banksy:hover {opacity: 0.7;}
+
+#Cey-Adams:hover {opacity: 0.7;}
+
+#Marka27:hover {opacity: 0.7;}
 
 .modal {
     display: none;
@@ -66,17 +86,18 @@ h4 {
     height: 100%;
     overflow: auto;
     background-color: rgb(0, 0, 0);
-    background-color: rgb(0, 0, 0.9);
+    background-color: rgb(0, 0, 0, 0.9);
 }
 
 .modal-content {
     margin: auto;
+    margin-top: 200px;
     display: block; 
     width: 80%;
     max-width: 700px;
 }
 
-.caption {
+#caption, #secondCaption,#thirdCaption {
     margin: auto;
     display: block;
     width: 80%;
@@ -87,17 +108,38 @@ h4 {
     height: 150px;
 }
 
-.modal-content, .caption {
+.modal-content, #caption, #secondCaption, #thirdCaption {
     animation-name: zoom;
     animation-duration: 0.6s;
 }
 
 @keyframes zoom {
     from {transform: scale(0);}
-    to{transform: scale(1); }
+    to {transform: scale(1); }
 }   
 
 .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px; 
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hide {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px; 
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+.conceal {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -113,14 +155,36 @@ h4 {
     cursor: pointer;
 }
 
+.hide:hover, .hide:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.conceal:hover, .conceal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 @media only screen and (max-width: 700px) { .modal-content {
     width: 100%;
     }
 }
+
+#footer{
+    margin-top: 200px;
+    border-top-style: solid;
+    border-top-color: slategrey;
+    border-top-width: 2px;
+    bottom: 0;
+}
+
 /*Site Map*/
 #site-map {
     text-align: center; 
-    padding-top: 600px; 
+    border-right: solid, slategray, 2px;
 }
 
 #site-map a {

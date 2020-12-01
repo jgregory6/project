@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head profile="http://www.artoftheb.com/">
+    <link rel="icon" type="image" href="images/artoftheb.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Map</title>
     <link rel="stylesheet" href="styles/site-map.css"/>
 </head>
 <body>
+    <div>
+        <h2><a href="index.html"><img id="logo" img src="images/artoftheb.jpg" alt="Logo"></a>The Art of the B</h2>
+    </div>
     <div id="nav">
         <nav>
         <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
         <a href="street-art.html">Street Art</a>
         <a href="upcoming-exhibits.html">Upcoming Exhibits</a>
         <a href="artist-spotlight.html">Artist Spotlight</a>
+        <a href="shout-outs.html">Shout Outs</a>
         <a href="contact.html">Contact</a>
         </nav>
     </div>
+    <div id="honor-code">
+        <p>"I, <b>Jack Gregory</b>, pledge my honor that I have neither received 
+            nor provided unauthorized assistance during the completion of this work. I have read 
+            the term project instructions and observed all the restrictions and limitations specified therein."</p>
+    </div>
+    <div id="footer">        
+        <button id="show">Show Me!</button>
+        <button id="hide">Hide Me!</button>
+    </div>
+    <script>
+        let button = document.getElementById("show");
+
+        function reveal() {
+            document.getElementById("honor-code").style.display = "block";
+        }
+        button.onclick = reveal;
+
+        let buttonTWo = document.getElementById("hide");
+
+        function conceal () {
+            document.getElementById("honor-code").style.display = "none";
+        }
+        buttonTWo.onclick = conceal;
+    </script>
 </body>
 </html>

@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head profile="http://www.artoftheb.com/">
+    <link rel="icon" type="image" href="images/artoftheb.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Artist Spotlight</title>
     <link rel="stylesheet" href="styles/artist-spotlight.css"/>
 </head>
 <body>
+    <div>
+        <h2><a href="index.html"><img id="logo" img src="images/artoftheb.jpg" alt="Logo"></a>The Art of the B</h2>
+    </div>
     <div id="nav">
         <nav>
         <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
         <a href="street-art.html">Street Art</a>
         <a href="upcoming-exhibits.html">Upcoming Exhibits</a>
         <a href="artist-spotlight.html">Artist Spotlight</a>
+        <a href="shout-outs.html">Shout Outs</a>
         <a href="contact.html">Contact</a>
         </nav>
     </div>
@@ -23,49 +27,102 @@
         <div>Anonymous England-based street artist</div>
         <div>
             <h4>Works</h4>
-            <img id="image-1" src="images/Banksy.jpg" alt="Follow Your Dreams - CANCELLED">
+           <img id="Banksy" src="images/Banksy.jpg" alt="Follow Your Dreams - CANCELLED (Boston, 2010)"> 
         </div>
-            <div class="modal">
+            <div class="modal" id="firstModal">
                 <span class="close">&times</span>
-                <img class="modal-content">
-                <div class="caption"></div>
+                <img class="modal-content" id="modalImage">
+                <div id="caption"></div>
             </div>
         <div>Cey Adams</div>
         <div>A visual artist from NYC</div>
         <div>
             <h4>Works</h4>
-            <img id="image-2" src="images/Cey Adams.jpg" alt="Love Mural">
+            <img id="Cey-Adams" src="images/Cey Adams.jpg" alt="Love Mural (Boston, 2017)"> 
         </div>
-            <div class="modal">
-                <span class="close">&times</span>
-                <img class="modal-content">
-                <div class="caption"></div>
+            <div class="modal" id="secondModal">
+                <span class="hide">&times</span>
+                <img class="modal-content" id="modalImage-2">
+                <div id="secondCaption"></div> 
+            </div>
+        <div>Marka 27</div>
+        <div>Local Boston artist who's work encompasses graffiti, street culture, and design</div>
+        <div>
+            <h4>Works</h4>
+            <img id="Marka27" src="images/MARKA27.png" alt="'Rebirth' (Somerville, 2019)"> 
+        </div>
+            <div class="modal" id="thirdModal">
+                <span class="conceal">&times</span>
+                <img class="modal-content" id="modalImage-3">
+                <div id="thirdCaption"></div> 
             </div>
     </div>
-    <div id="site-map">
-        <a href="site-map.html"><p style="text-align: center;">Site Map</p></a>
-    </div>
+        <div id="footer">
+            <div id="site-map">
+                <a href="site-map.html"><p style="text-align: center;">Site Map</p></a>
+            </div>
+        </div>
     <script>
-        let modal = document.getElementsByClassName("modal");
-        let img1 = document.getElementById("image-1");
-        let img2 = document.getElementById("image-2");
-        let modalImg = document.getElementsByClassName("modal-content");
-        let caption = document.getElementsByClassName("caption");
-        
-        function one () {
-            modal.style.display = "block";
-            modalImg.src = img1.src;
-            caption.innerHTML = img1.alt;
-        }
-        img1.onclick = one;
+       let modal = document.getElementById("firstModal");
+       let img = document.getElementById("Banksy");
+       let modalImg = document.getElementById("modalImage");
+       let captionText = document.getElementById("caption");
 
-        let span = document.getElementsByClassName("close")[0];
+       function show () {
+           modal.style.display = "block";
+           modalImg.src = img.src;
+           captionText.innerHTML = img.alt;
+       }
 
-        function two () {
-             modal.style.display = "none";
+       img.onclick = show;
+
+       let span = document.getElementsByClassName("close")[0];
+
+       function close () {
+           modal.style.display = "none";
+       }
+       span.onclick = close; 
+       
+       
+       let modalTwo = document.getElementById("secondModal");
+       let img02 = document.getElementById("Cey-Adams");
+       let modalImg02 = document.getElementById("modalImage-2");
+       let captionText02 = document.getElementById("secondCaption");
+
+       function showTwo () {
+           modalTwo.style.display = "block";
+           modalImg02.src = img02.src;
+           captionText02.innerHTML = img02.alt;
+       }
+       img02.onclick = showTwo;
+
+       let span02 = document.getElementsByClassName("hide")[0];
+
+       function closeTwo () {
+           modalTwo.style.display = "none";
         }
-        span.onclick = two;
- 
+        span02.onclick = closeTwo; 
+
+
+       let modalThree = document.getElementById("thirdModal");
+       let img03 = document.getElementById("Marka27");
+       let modalImg03 = document.getElementById("modalImage-3");
+       let captionText03 = document.getElementById("thirdCaption");
+
+       function showThree () {
+           modalThree.style.display = "block";
+           modalImg03.src = img03.src;
+           captionText03.innerHTML = img03.alt;
+       }
+       img03.onclick = showThree;
+
+       let span03 = document.getElementsByClassName("conceal")[0];
+
+       function closeThree () {
+           modalThree.style.display = "none";
+        }
+        span03.onclick = closeThree; 
+
     </script>
 </body>
 </html>

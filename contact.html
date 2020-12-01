@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head profile="http://www.artoftheb.com/">
+    <link rel="icon" type="image" href="images/artoftheb.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="styles/contact.css"/>
 </head>
 <body>
+    <div>
+        <h2><a href="index.html"><img id="logo" img src="images/artoftheb.jpg" alt="Logo"></a>The Art of the B</h2>
+    </div>
     <div id="nav">
         <nav>
         <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
         <a href="street-art.html">Street Art</a>
         <a href="upcoming-exhibits.html">Upcoming Exhibits</a>
         <a href="artist-spotlight.html">Artist Spotlight</a>
+        <a href="shout-outs.html">Shout Outs</a>
         <a href="contact.html">Contact</a>
         </nav>
 </div>
 
 <div class="container">
     <div>
-    <form action="mailto:jgregory1@babson.edu" method="POST">
+    <form id="contact" action="mailto:jgregory1@babson.edu"  method="POST">
         <label for="first-name">First Name</label>
-        <input type="text" id="first-name" name="first-name" placeholder="First Name">
+        <input type="text" id="First-name" name="first-name" placeholder="First Name">
         
         <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+        <input type="text" id="Last-name" name="last-name" placeholder="Last Name">
         <label for="email">Email:</label>
         <input 
-            type="text" 
-            id="email"
+            type="email" 
+            id="Email"
             name="email" 
             placeholder="Email Address"
         />
@@ -37,7 +41,7 @@
     <div>
         <label for="comments">Leave a Reply</label>
             <textarea
-                id="comments"
+                id="Comments"
                 name="comments"
                 rows="5"
                 cols="25"
@@ -45,16 +49,62 @@
             ></textarea>
     </div>
     <div>
-        <button type="submit" id="submit" name="submit-button">Submit</button>
-        <button type="reset" id="reset" name="reset-button">Reset</button>
+        <p id ="notice">Please fill out the form correctly, jackass.</p>
+    </div>
+    <div>
+        <button type="submit" id="sub" name="submit-button">Submit</button>
+        <button type="reset" id="res" name="reset-button">Reset</button>
     </div>
     </form>
 </div>
-    <div id="site-map">
-        <a href="site-map.html"><p style="text-align: center;">Site Map</p></a>
+    <div>
+        <img id = "Kendrick-Lamar" src="images/Kendrick Lamar.jpg" alt="Kendrick Lamar">
+    </div>
+    <div id="footer">
+        <div id="site-map">
+            <a href="site-map.html"><p style="text-align: center;">Site Map</p></a>
+        </div>
     </div>
 <script>
-    
+    function validate () {
+        const myForm = document.querySelector("form");
+        let notice = document.getElementById("notice");
+        if (myForm["First-name"].value.length == 0) {
+            notice.style.display = "block";
+        }  
+        if (myForm["Last-name"].value.length == 0) {
+            notice.style.display = "block";
+        }
+        if (myForm["Email"].value.length == 0) {
+            notice.style.display = "block";
+        }  
+    }  
+    document.getElementById("sub").onclick = validate;  
+
+
+    function runItBack () {
+        let notice = document.getElementById("notice");
+        notice.style.display = "none";
+    }
+    document.getElementById("res").onclick = runItBack;
+
+
+    function enlarge () {
+        let Kendrick = document.getElementById("Kendrick-Lamar");
+            Kendrick.style.width = "600px";
+      }
+
+      document.getElementById("Kendrick-Lamar").onmouseover = enlarge;
+
+
+      function backToOriginalSize () {
+        let Kendrick = document.getElementById("Kendrick-Lamar");
+            Kendrick.style.width = "500px";            
+      }
+
+      document.getElementById("Kendrick-Lamar").onmouseout = backToOriginalSize;
+
+
 </script>
 </body>
 </html>

@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head profile="http://www.artoftheb.com/">
+    <link rel="icon" type="image" href="images/artoftheb.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steet Art</title>
     <link rel="stylesheet" href="styles/street-art.css"/>
 </head>
 <body>
+    <div>
+        <h2><a href="index.html"><img id="logo" img src="images/artoftheb.jpg" alt="Logo"></a>The Art of the B</h2>    
+    </div>
     <div id="nav">
         <nav>
         <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
         <a href="street-art.html">Street Art</a>
         <a href="upcoming-exhibits.html">Upcoming Exhibits</a>
         <a href="artist-spotlight.html">Artist Spotlight</a>
+        <a href="shout-outs.html">Shout Outs</a>
         <a href="contact.html">Contact</a>
         </nav>
     </div>
     <div class="slideshow-container">
         <div class="slides">
            <div class="counter">1/4</div>
-           <img src="images/Biggie.jpg" alt="The Notorious B.I.G."> 
+           <img class="street-art"src="images/Biggie.jpg" alt="The Notorious B.I.G."> 
            <div class="caption">The Notortious B.I.G by Unknown</div>
         </div>
-
         <div class="slides">
             <div class="counter">2/4</div>
-            <img src="images/Os Gemeos.jpg" alt="Os Gemeos">
+            <img class="street-art" src="images/Os Gemeos.jpg" alt="Os Gemeos">
             <div class="caption">"The Giant of Boston" by Os Gemeos</div>
         </div>
 
         <div class="slides">
             <div class="counter">3/4</div>
-            <img src="images/Muhammad Ali.jpg" alt="Muhammad Ali">
+            <img class="street-art" src="images/Muhammad Ali.jpg" alt="Muhammad Ali">
             <div class="caption">Muhammad Ali by Unknown</div>
         </div>
 
         <div class="slides">
             <div class="counter">4/4</div>
-            <img src="images/Terry Rozier.jpg" alt="Scary Terry">
+            <img class="street-art" src="images/Terry Rozier.jpg" alt="Scary Terry">
             <div class="caption">Scary Terry by Merkaveli</div>
         </div>
         <a id="prev">&#10094;</a>
         <a id="next">&#10095;</a>
     </div>
-    <div class= "dots" style="text-align:center"> 
-        <span id="dot-1"></span>
-        <span id="dot-2"></span>
-        <span id="dot-3"></span>
-        <span id="dot-4"></span>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2947.942719168689!2d-71.1018413!3d42.36506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37753f70e2aeb%3A0xac5da48788119780!2sCambridge%20Graffiti%20Wall!5e0!3m2!1sen!2sus!4v1606789453087!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
-    <div id="site-map">
-        <a href="site-map.html"><p>Site Map</p></a>
+    <div id="footer">
+        <div id="site-map">
+            <a href="site-map.html"><p>Site Map</p></a>
+        </div> 
     </div>
     <script>
      let slideIndex = 1;
@@ -70,10 +72,10 @@
         if (n > slides.length) {slideIndex = 1}
         if (n < 1) {slideIndex = slides.length} ;
         for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
+            slides[i].style.display = "none";
+        }   
         slides[slideIndex-1].style.display = "block"; 
-}
+    }
      document.getElementById("prev").addEventListener("click", function () {plusSlides(-1)});
      document.getElementById("next").addEventListener("click", function () {plusSlides(1)});
 

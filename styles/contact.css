@@ -1,11 +1,26 @@
+h2{
+    text-align: center;
+    color: forestgreen;
+
+}
+
+#logo {
+    width: 5%;
+    padding-right: 2px;
+}
+
 /* Navigation Bar */
 #nav {
     text-align: center;
+    font-size: 20px;
+    padding-bottom: 20px;
+
 }
 
 #nav a {
     padding: 10px;
     text-decoration: none;
+    border-bottom: 2px solid silver;
 }
 
 #nav a:hover {
@@ -20,6 +35,7 @@
     color: forestgreen;
 }
 
+
 .container {
    padding: 10px; 
    margin-top: 20px;
@@ -28,7 +44,7 @@
    border-color: slategrey;
 }
 
-#first-name {
+#First-name {
     padding: 4px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -36,7 +52,7 @@
     box-sizing: border-box;
 }
 
-#last-name {
+#Last-name {
     padding: 4px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -44,20 +60,15 @@
     box-sizing: border-box;
 }
 
-#email {
+#Email {
     padding: 4px;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
 }
-/*
-label [for=emails] {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-*/
-#comments {
+
+#Comments {
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -66,12 +77,7 @@ label [for=emails] {
     display: inline-block;
     box-sizing: border-box;
 }
-/*
-label [for=comments] {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-*/
+
 #submit {
     margin-top: 10px
 }
@@ -79,14 +85,38 @@ label [for=comments] {
 #reset {
     margin-top: 10px;
 }
+
+#notice {
+    display: none;
+    color: red;
+}
+
+
+#Kendrick-Lamar {
+    display: block;
+    padding-top: 30px;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#footer {
+    margin-top: 100px;
+    border-top-style: solid;
+    border-top-color: slategrey;
+    border-top-width: 2px;
+    bottom: 0;
+}
 /* Sitemap */
 #site-map {
     text-align: center;
-    padding-top: 600px; 
 }
 
 #site-map a {
     text-decoration: none;
+    font-size: 14px;
 }
 
 #site-map a:hover {
